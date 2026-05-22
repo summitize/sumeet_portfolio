@@ -31,15 +31,6 @@ export default function Home({ pageHtml }: HomeProps) {
       <Head>
         <title>Sumeet Boob | AI Transformation & Delivery Leader</title>
         <meta name="description" content="Portfolio of Sumeet Boob - AI Transformation & Delivery Leader | PMP®" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Space+Grotesk:wght@300;400;600&display=swap"
-          rel="stylesheet"
-        />
-        <link rel="stylesheet" href="/styles.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-        <script defer src="/script.js"></script>
       </Head>
 
       <div style={{ minHeight: "100vh", position: "relative", background: "var(--bg-color)" }}>
