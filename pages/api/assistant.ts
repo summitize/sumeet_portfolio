@@ -65,7 +65,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
-    return res.status(500).json({ error: "Missing OPENAI_API_KEY environment variable." });
+    return res.status(500).json({ error: "OPENAI_API_KEY is not configured. Please set the OpenAI API key in Vercel environment variables." });
   }
 
   const messages = buildAssistantMessages(chatHistory ?? [], prompt);
