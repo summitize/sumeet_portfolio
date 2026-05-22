@@ -1,4 +1,4 @@
-:root {
+:global(:root) {
   --bg: #05050a;
   --surface: #11131d;
   --surface-alt: #151a2c;
@@ -10,7 +10,7 @@
   --shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
 }
 
-[data-theme="light"] {
+:global([data-theme="light"]) {
   --bg: #f4f5f7;
   --surface: #ffffff;
   --surface-alt: #f7f8fb;
