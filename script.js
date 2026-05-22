@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const typedText = document.getElementById('typed-text');
     if (typedText && window.Typed) {
         new Typed('#typed-text', {
-            strings: ['Program & Delivery Leader', 'Agile Transformation Expert', 'Strategic Innovator'],
+            strings: ['AI Transformation & Delivery Leader', 'Global Delivery & DevSecOps Leader', 'PMP® Certified Program Manager'],
             typeSpeed: 50,
             backSpeed: 30,
             backDelay: 2000,
