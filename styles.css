@@ -198,46 +198,6 @@ body.light-mode .theme-toggle .moon-icon {
     display: none;
 }
 
-.assistant-notice {
-    position: fixed;
-    bottom: 1rem;
-    left: 1rem;
-    right: 1rem;
-    z-index: 2000;
-    background: rgba(255, 255, 255, 0.9);
-    color: #05050A;
-    border: 1px solid rgba(5, 5, 10, 0.12);
-    border-radius: 14px;
-    padding: 0.9rem 1rem;
-    font-size: 0.95rem;
-    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    line-height: 1.4;
-}
-
-.assistant-notice a {
-    color: #0f62fe;
-    text-decoration: underline;
-}
-
-.assistant-notice code {
-    background: rgba(0, 0, 0, 0.04);
-    padding: 0.15rem 0.35rem;
-    border-radius: 6px;
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
-@media (max-width: 768px) {
-    .assistant-notice {
-        left: 0.75rem;
-        right: 0.75rem;
-        font-size: 0.88rem;
-    }
-}
-
 /* Mobile adjustments */
 @media (max-width: 768px) {
     .header {

@@ -66,10 +66,6 @@ export default function AIChatWidget() {
     setTheme(preferredDark ? "dark" : "light");
   }, []);
 
-  useEffect(() => {
-    document.documentElement.dataset.theme = theme;
-  }, [theme]);
-
   const assistEndpoint = useMemo(() => "/api/assistant", []);
 
   const addMessage = (message: ChatMessage) => {
@@ -181,7 +177,7 @@ export default function AIChatWidget() {
   };
 
   return (
-    <div className={styles.widgetShell} aria-live="polite">
+    <div className={styles.widgetShell} data-theme={theme} aria-live="polite">
       <button
         className={styles.floatingButton}
         aria-label={isOpen ? "Close Summitizer" : "Open Summitizer"}

@@ -42,7 +42,7 @@ export default function Home({ pageHtml }: HomeProps) {
         <script defer src="/script.js"></script>
       </Head>
 
-      <div style={{ minHeight: "100vh", position: "relative", background: "#05050a" }}>
+      <div style={{ minHeight: "100vh", position: "relative", background: "var(--bg-color)" }}>
         <div dangerouslySetInnerHTML={{ __html: pageHtml }} />
         <AIChatWidget />
       </div>

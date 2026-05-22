@@ -11,6 +11,14 @@ type HandlerResponse = {
   message?: string;
 };
 
+type OpenAiErrorPayload = {
+  error?: {
+    code?: string | null;
+    message?: string;
+    type?: string;
+  };
+};
+
 const rateLimitStore = new Map<string, { count: number; windowStart: number }>();
 const RATE_LIMIT_WINDOW_MS = 60_000;
 const MAX_REQUESTS = Number(process.env.RATE_LIMIT_MAX_REQUESTS || 15);
@@ -70,26 +78,58 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
   const messages = buildAssistantMessages(chatHistory ?? [], prompt);
 
-  const openAiResponse = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`
-    },
-    body: JSON.stringify({
-      model: process.env.ASSISTANT_MODEL || "gpt-4o-mini",
-      messages,
-      temperature: Number(process.env.ASSISTANT_TEMPERATURE || 0.0),
-      top_p: 1,
-      max_tokens: 700,
-      stream: true
-    })
-  });
+  let openAiResponse: Response;
+  try {
+    openAiResponse = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${apiKey}`
+      },
+      body: JSON.stringify({
+        model: process.env.ASSISTANT_MODEL || "gpt-4o-mini",
+        messages,
+        temperature: Number(process.env.ASSISTANT_TEMPERATURE || 0.0),
+        top_p: 1,
+        max_completion_tokens: 700,
+        stream: true
+      })
+    });
+  } catch (error) {
+    console.error("OpenAI API network error:", error);
+    return res.status(502).json({ error: "Assistant service could not reach OpenAI." });
+  }
 
   if (!openAiResponse.ok) {
     const errorText = await openAiResponse.text();
-    console.error("OpenAI API error:", errorText);
-    return res.status(openAiResponse.status).json({ error: "OpenAI request failed." });
+    let openAiError: OpenAiErrorPayload | null = null;
+
+    try {
+      openAiError = JSON.parse(errorText) as OpenAiErrorPayload;
+    } catch {
+      // Keep the raw text in server logs when OpenAI returns a non-JSON error.
+    }
+
+    console.error("OpenAI API error:", {
+      status: openAiResponse.status,
+      code: openAiError?.error?.code,
+      type: openAiError?.error?.type,
+      message: openAiError?.error?.message ?? errorText
+    });
+
+    if (openAiResponse.status === 401) {
+      return res.status(502).json({ error: "Assistant authentication with OpenAI failed. Check OPENAI_API_KEY in Vercel." });
+    }
+
+    if (openAiResponse.status === 429) {
+      return res.status(503).json({ error: "Assistant capacity is unavailable right now. Check OpenAI quota or try again shortly." });
+    }
+
+    if (openAiResponse.status === 400) {
+      return res.status(502).json({ error: "OpenAI rejected the assistant request. Check ASSISTANT_MODEL settings." });
+    }
+
+    return res.status(502).json({ error: "Assistant service received an OpenAI error." });
   }
 
   res.setHeader("Content-Type", "text/event-stream");
