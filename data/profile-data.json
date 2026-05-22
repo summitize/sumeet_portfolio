@@ -1,0 +1,108 @@
+{
+  "name": "Sumeet Satish Boob",
+  "headline": "AI Transformation & Delivery Leader | PMP®",
+  "summary": "AI Transformation & Delivery Leader (PMP®) with nearly 20 years of experience leading global engineering organizations, enterprise transformation programs, and AI-enabled modernization initiatives across BFSI, Healthcare, Retail, and Telecom domains.",
+  "contact": {
+    "email": "sumeetboob@gmail.com",
+    "phone": "+91 9822320290",
+    "linkedin": "https://linkedin.com/in/sumeetsb",
+    "website": "https://portfolio.summitize.in"
+  },
+  "highlights": [
+    "Directed $12M+ cross-regional portfolios with full delivery ownership and executive stakeholder engagement.",
+    "Scaled 60+ FTE global engineering teams across India, Romania, and the U.S.",
+    "Spearheaded Agile, SAFe, and DevSecOps transformation initiatives delivering 30%+ productivity gains.",
+    "Reduced client escalations by 50% through strengthened governance frameworks."
+  ],
+  "domains": ["Banking & Financial Services", "Healthcare", "Retail", "Telecom"],
+  "experience": [
+    {
+      "company": "Brillio Technologies",
+      "title": "Senior Software Development Manager",
+      "period": "Sep 2021 – Present",
+      "responsibilities": [
+        "Led strategic transformation initiatives across healthcare and retail accounts enabling platform modernization and operational scalability.",
+        "Partnered with client leadership teams to define roadmap initiatives aligned to digital transformation goals.",
+        "Drove AI-assisted engineering productivity initiatives using GitHub Copilot and automation accelerators.",
+        "Directed a 60+ FTE global engineering organization delivering a $3M+ portfolio with full P&L accountability.",
+        "Strengthened executive governance cadence across client leadership, reducing escalations by 50%.",
+        "Awarded Employee of the Quarter twice for exceptional project delivery."
+      ],
+      "accounts": ["CareMetx", "Dayforce", "Albertsons", "Ciena Blue Planet"]
+    },
+    {
+      "company": "Citicorp Technology Services",
+      "title": "AVP, Technology & DevOps Manager",
+      "period": "May 2015 – Sep 2021",
+      "responsibilities": [
+        "Led globally distributed engineering and DevOps operations across 4 delivery tracks with 18-member cross-functional teams.",
+        "Managed enterprise liquidity and treasury platform delivery across Java, WebSphere, and SQL ecosystems.",
+        "Directed DevSecOps governance and compliance initiatives including Blackduck, Checkmarx, Sonar, and Contrast.",
+        "Automated enterprise deployment workflows reducing build and deployment effort by 32% across Citi LMS operations.",
+        "Led modernization initiatives enabling migration from legacy architecture to microservices-based platforms.",
+        "Received Quarterly Gold Award for implementing one-click deployment automation improving deployment efficiency by 25%."
+      ]
+    },
+    {
+      "company": "Synechron Technologies",
+      "title": "Technology Lead",
+      "period": "May 2011 – Apr 2015",
+      "responsibilities": [
+        "Led managed services delivery for 32 enterprise insurance clients across globally distributed engagement models.",
+        "Managed 2 Agile delivery pods comprising developers and QA engineers, overseeing end-to-end lifecycle execution.",
+        "Acted as Scrum Master and Delivery Lead driving sprint governance, stakeholder communication, and delivery planning.",
+        "Twice recognized as Employee of the Month for high-impact project execution."
+      ]
+    },
+    {
+      "company": "Opus Software Solutions",
+      "title": "Development Lead",
+      "period": "Jun 2008 – Jun 2011",
+      "responsibilities": [
+        "Led development teams building mission-critical payment processing modules for Western Union."
+      ]
+    },
+    {
+      "company": "SunGard Technology Solutions",
+      "title": "Software Engineer",
+      "period": "Jun 2006 – Jun 2008",
+      "responsibilities": [
+        "Developed energy products for SunGard clients including British Petroleum (BP)."
+      ]
+    }
+  ],
+  "certifications": [
+    "Project Management Professional (PMP®)",
+    "Google Cloud Digital Leader (GCP-CDL)",
+    "SAFe Certified Product Owner",
+    "SAFe Certified Scrum Master",
+    "PRINCE2 Practitioner"
+  ],
+  "education": [
+    {
+      "degree": "PGDBA in e-Business",
+      "institution": "Welingkar Institute of Management, Mumbai University",
+      "year": "2009"
+    },
+    {
+      "degree": "Master of Engineering in Computer Science",
+      "institution": "Vishwakarma Institute of Technology, Pune University",
+      "year": "2006"
+    },
+    {
+      "degree": "Bachelor of Engineering in Computer Science",
+      "institution": "Pune University",
+      "year": "2004"
+    }
+  ],
+  "patent": {
+    "title": "System and Method for Data Sharing and Group Messaging using Mobile Phone",
+    "number": "225380 984/MUM/2004",
+    "jurisdiction": "India"
+  },
+  "resumeUrl": "/Sumeet Resume.pdf",
+  "quickActions": {
+    "downloadResume": "/Sumeet Resume.pdf",
+    "contact": "mailto:sumeetboob@gmail.com"
+  }
+}
