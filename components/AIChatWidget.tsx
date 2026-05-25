@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { KeyboardEvent } from "react";
+import type { ReactNode } from "react";
 import profileData from "../data/profile-data.json";
 import styles from "./AIChatWidget.module.css";
 
@@ -31,6 +32,62 @@ const initialWelcome = {
 
 function getTimestamp() {
   return new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+}
+
+function renderInline(text: string): ReactNode[] {
+  const nodes: ReactNode[] = [];
+  const pattern = /(\*\*[^*]+\*\*)/g;
+  const parts = text.split(pattern);
+
+  parts.forEach((part, index) => {
+    if (!part) return;
+    if (part.startsWith("**") && part.endsWith("**")) {
+      nodes.push(<strong key={index}>{part.slice(2, -2)}</strong>);
+    } else {
+      nodes.push(part);
+    }
+  });
+
+  return nodes;
+}
+
+function renderMessageContent(content: string) {
+  const blocks: ReactNode[] = [];
+  const lines = content.split(/\r?\n/);
+  let currentList: string[] = [];
+
+  const flushList = () => {
+    if (!currentList.length) return;
+    const items = currentList;
+    currentList = [];
+    blocks.push(
+      <ul key={`list-${blocks.length}`} className={styles.messageList}>
+        {items.map((item, index) => (
+          <li key={index}>{renderInline(item)}</li>
+        ))}
+      </ul>
+    );
+  };
+
+  lines.forEach((line) => {
+    const trimmed = line.trim();
+    if (!trimmed) {
+      flushList();
+      return;
+    }
+
+    const bullet = trimmed.match(/^[-*•]\s+(.*)$/);
+    if (bullet) {
+      currentList.push(bullet[1]);
+      return;
+    }
+
+    flushList();
+    blocks.push(<p key={`p-${blocks.length}`}>{renderInline(trimmed)}</p>);
+  });
+
+  flushList();
+  return blocks.length ? blocks : <p>{content}</p>;
 }
 
 export default function AIChatWidget() {
@@ -217,7 +274,13 @@ export default function AIChatWidget() {
                     <span>{message.role === "assistant" ? "Summitizer" : "You"}</span>
                     <span>{getTimestamp()}</span>
                   </div>
-                  <p>{message.content || (message.role === "assistant" ? "Thinking..." : "" )}</p>
+                  <div className={styles.messageContent}>
+                    {message.content
+                      ? renderMessageContent(message.content)
+                      : message.role === "assistant"
+                        ? <p>Thinking...</p>
+                        : null}
+                  </div>
                 </div>
               </div>
             ))}
