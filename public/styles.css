@@ -5,6 +5,10 @@
     --secondary-color: #10121A; /* Deep tone (sapphire/plum hint) */
     --glass-bg: rgba(5, 5, 10, 0.85);
     --border-color: rgba(212, 175, 55, 0.15); /* Hint of gold in borders */
+    --muted-color: #aaa;
+    --soft-text-color: #ccc;
+    --subtle-text-color: #888;
+    --footer-text-color: #666;
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Space Grotesk', sans-serif;
     --gradient-1: linear-gradient(135deg, #0f172a 0%, #2e1025 100%); /* Sapphire to plum */
@@ -27,13 +31,17 @@
 body.light-mode {
     --bg-color: #faf9f6; /* Off-white/light gray */
     --text-color: #121212; /* Black */
-    --accent-color: #b8962e; /* Slightly deeper gold for contrast */
+    --accent-color: #765b12; /* Deeper gold for readable day-mode text */
     --secondary-color: #f2efe9; /* Champagne tone */
     --glass-bg: rgba(250, 249, 246, 0.85);
     --border-color: rgba(184, 150, 46, 0.2); 
+    --muted-color: #4b5563;
+    --soft-text-color: #2f3338;
+    --subtle-text-color: #5f6670;
+    --footer-text-color: #4b5563;
     --gradient-1: linear-gradient(135deg, #e6dfd3 0%, #f2efe9 100%); /* Soft champagne */
     --gradient-2: linear-gradient(135deg, #ffffff 0%, #e6dfd3 100%); /* Pearl to champagne */
-    --gradient-3: linear-gradient(120deg, #b8962e 0%, #dfb841 100%); /* Gold pop */
+    --gradient-3: linear-gradient(120deg, #765b12 0%, #b8962e 100%); /* Gold pop */
     
     /* Utility variables */
     --shadow-color: rgba(0, 0, 0, 0.1);
@@ -164,14 +172,17 @@ a {
 .theme-toggle {
     background: var(--secondary-color);
     border: 1px solid var(--border-color);
-    width: 40px;
+    min-width: 72px;
     height: 40px;
-    border-radius: 50%;
+    border-radius: 999px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
     color: var(--text-color);
     transition: all 0.3s ease;
     margin-left: 1rem;
@@ -182,16 +193,24 @@ a {
     border-color: var(--accent-color);
 }
 
+.theme-toggle::before {
+    content: 'Day';
+}
+
+body.light-mode .theme-toggle::before {
+    content: 'Night';
+}
+
 .theme-toggle .sun-icon {
     display: none;
 }
 
 .theme-toggle .moon-icon {
-    display: block;
+    display: none;
 }
 
 body.light-mode .theme-toggle .sun-icon {
-    display: block;
+    display: none;
 }
 
 body.light-mode .theme-toggle .moon-icon {
@@ -267,6 +286,7 @@ body.light-mode .theme-toggle .moon-icon {
 }
 
 .hero-subtitle {
+    color: var(--soft-text-color);
     font-size: 1.5rem;
     margin-bottom: 2.5rem;
     transform: translateY(20px);
@@ -383,8 +403,9 @@ body.light-mode .theme-toggle .moon-icon {
 }
 
 .btn-outline {
-    background-color: transparent;
+    background-color: var(--btn-outline-bg);
     color: var(--text-color);
+    border: 2px solid var(--btn-outline-border);
 }
 
 .btn-outline:hover {
@@ -587,7 +608,7 @@ body.light-mode .theme-toggle .moon-icon {
 }
 
 .project-info p {
-    color: #aaa;
+    color: var(--muted-color);
     margin-bottom: 1.5rem;
     font-size: 0.95rem;
 }
@@ -643,7 +664,7 @@ footer {
     padding: 2rem 5%;
     border-top: 1px solid var(--border-color);
     text-align: center;
-    color: #666;
+    color: var(--footer-text-color);
     font-size: 0.9rem;
 }
 
@@ -722,7 +743,7 @@ footer {
     display: block;
     margin-bottom: 15px;
     font-style: italic;
-    color: #bbb;
+    color: var(--muted-color);
     font-family: var(--font-heading);
 }
 
@@ -736,7 +757,7 @@ footer {
     padding-left: 20px;
     margin-bottom: 10px;
     font-size: 0.95rem;
-    color: #ccc;
+    color: var(--soft-text-color);
 }
 
 .timeline-content li::before {
@@ -836,7 +857,7 @@ footer {
 
 .client-name {
     font-size: 0.9rem;
-    color: #888;
+    color: var(--subtle-text-color);
     text-align: center;
     font-weight: 500;
 }
@@ -886,7 +907,7 @@ footer {
 
 .interest-item p {
     font-size: 0.9rem;
-    color: #aaa;
+    color: var(--muted-color);
 }
 
 /* Contact Section Redesign */
@@ -958,7 +979,7 @@ footer {
 .contact-detail label {
     display: block;
     font-size: 0.75rem;
-    color: #666;
+    color: var(--subtle-text-color);
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 4px;
@@ -986,7 +1007,7 @@ footer {
 .contact-actions p {
     margin-bottom: 1.5rem;
     font-style: italic;
-    color: #888;
+    color: var(--subtle-text-color);
 }
 
 .big-btn {
@@ -1152,7 +1173,7 @@ footer {
 }
 
 .edu-content p {
-    color: #aaa;
+    color: var(--muted-color);
     font-size: 1.1rem;
 }
 
@@ -1288,7 +1309,7 @@ footer {
 }
 .testimonial-author span {
     font-size: 0.9rem;
-    color: #888;
+    color: var(--subtle-text-color);
 }
 .swiper-pagination-bullet {
     background: var(--text-color) !important;

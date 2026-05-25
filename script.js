@@ -54,16 +54,32 @@ document.addEventListener("DOMContentLoaded", () => {
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
     if (themeToggle) {
+        const syncThemeToggleLabel = () => {
+            const isLight = body.classList.contains('light-mode');
+            themeToggle.setAttribute('aria-label', isLight ? 'Switch to night theme' : 'Switch to day theme');
+            themeToggle.setAttribute('title', isLight ? 'Switch to night theme' : 'Switch to day theme');
+        };
+
         try {
             if (localStorage.getItem('theme') === 'light') body.classList.add('light-mode');
         } catch (e) { console.warn("localStorage not available"); }
+        syncThemeToggleLabel();
 
-        themeToggle.addEventListener('click', () => {
+        const toggleTheme = () => {
             body.classList.toggle('light-mode');
             const isLight = body.classList.contains('light-mode');
             try { localStorage.setItem('theme', isLight ? 'light' : 'dark'); } catch (e) {}
+            syncThemeToggleLabel();
             themeToggle.style.transform = "scale(0.8)";
             setTimeout(() => themeToggle.style.transform = "scale(1.1)", 100);
+        };
+
+        themeToggle.addEventListener('click', toggleTheme);
+        themeToggle.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                toggleTheme();
+            }
         });
     }
 
