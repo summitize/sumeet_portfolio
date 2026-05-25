@@ -172,17 +172,14 @@ a {
 .theme-toggle {
     background: var(--secondary-color);
     border: 1px solid var(--border-color);
-    min-width: 72px;
+    width: 40px;
     height: 40px;
-    border-radius: 999px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
+    font-size: 1.2rem;
     color: var(--text-color);
     transition: all 0.3s ease;
     margin-left: 1rem;
@@ -193,24 +190,16 @@ a {
     border-color: var(--accent-color);
 }
 
-.theme-toggle::before {
-    content: 'Day';
-}
-
-body.light-mode .theme-toggle::before {
-    content: 'Night';
-}
-
 .theme-toggle .sun-icon {
     display: none;
 }
 
 .theme-toggle .moon-icon {
-    display: none;
+    display: block;
 }
 
 body.light-mode .theme-toggle .sun-icon {
-    display: none;
+    display: block;
 }
 
 body.light-mode .theme-toggle .moon-icon {
