@@ -1123,6 +1123,90 @@ footer {
     margin-bottom: 10px;
 }
 
+/* Sites/Personal Projects Section */
+.sites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.site-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2.5rem 2rem;
+    background: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.site-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-color);
+    background: rgba(212, 175, 55, 0.05);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
+}
+
+.site-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.site-card:hover .site-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.site-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.site-card p {
+    font-size: 0.9rem;
+    color: var(--muted-color);
+    margin-bottom: 1rem;
+    min-height: 2.4em;
+}
+
+.site-url {
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.site-card:hover .site-url {
+    color: var(--soft-text-color);
+}
+
+@media (max-width: 768px) {
+    .sites-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .site-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .site-icon {
+        font-size: 2.5rem;
+    }
+
+    .site-card h3 {
+        font-size: 1.1rem;
+    }
+}
+
 .edu-logo {
     width: 40px;
     height: 40px;
