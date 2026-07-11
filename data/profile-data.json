@@ -1,7 +1,7 @@
 {
   "name": "Sumeet Satish Boob",
-  "headline": "AI Transformation & Delivery Leader | PMP®",
-  "summary": "AI Transformation & Delivery Leader (PMP®) with nearly 20 years of experience leading global engineering organizations, enterprise transformation programs, and AI-enabled modernization initiatives across BFSI, Healthcare, Retail, and Telecom domains.",
+  "headline": "Enterprise Transformation & Delivery Leader | Program & Portfolio Management | PMP®",
+  "summary": "Enterprise Transformation & Delivery Leader with 20 years of experience delivering large-scale technology transformation, global engineering leadership, and enterprise program execution across Banking, Healthcare & Life Sciences, Retail, and Telecom. Proven track record of managing multi-million-dollar portfolios, building high-performing global teams, driving operational excellence, and delivering complex digital transformation programs for Fortune 500 clients. Leveraging AI-assisted delivery, engineering productivity, and modern operating models to accelerate business outcomes, delivery excellence, & organizational transformation.",
   "contact": {
     "email": "sumeetboob@gmail.com",
     "phone": "+91 9822320290",
@@ -21,11 +21,13 @@
       "title": "Senior Software Development Manager",
       "period": "Sep 2021 – Present",
       "responsibilities": [
-        "Led strategic transformation initiatives across healthcare and retail accounts enabling platform modernization and operational scalability.",
-        "Partnered with client leadership teams to define roadmap initiatives aligned to digital transformation goals.",
+        "Owned end-to-end delivery and transformation of strategic healthcare and retail programs, leading global engineering teams while driving modernization, operational excellence, executive governance, and portfolio growth.",
+        "Partnered with executive client stakeholders to shape transformation roadmaps, delivery strategy, and multi-year technology investment priorities.",
         "Drove AI-assisted engineering productivity initiatives using GitHub Copilot and automation accelerators.",
-        "Directed a 60+ FTE global engineering organization delivering a $3M+ portfolio with full P&L accountability.",
-        "Strengthened executive governance cadence across client leadership, reducing escalations by 50%.",
+        "Expanded strategic accounts through delivery excellence, executive relationship management, and identification of transformation opportunities.",
+        "Directed 60+ FTE global engineering organization delivering $3M+ portfolio (yearly) with full P&L accountability.",
+        "Strengthened executive governance cadence across client leadership, reducing escalations by 20%.",
+        "Delivered enterprise modernization initiatives across healthcare and retail platforms including CareMetx, Dayforce Tax Automation, and Albertsons Developer Portal.",
         "Awarded Employee of the Quarter twice for exceptional project delivery."
       ],
       "accounts": ["CareMetx", "Dayforce", "Albertsons", "Ciena Blue Planet"]
@@ -35,11 +37,13 @@
       "title": "AVP, Technology & DevOps Manager",
       "period": "May 2015 – Sep 2021",
       "responsibilities": [
-        "Led globally distributed engineering and DevOps operations across 4 delivery tracks with 18-member cross-functional teams.",
-        "Managed enterprise liquidity and treasury platform delivery across Java, WebSphere, and SQL ecosystems.",
-        "Directed DevSecOps governance and compliance initiatives including Blackduck, Checkmarx, Sonar, and Contrast.",
-        "Automated enterprise deployment workflows reducing build and deployment effort by 32% across Citi LMS operations.",
-        "Led modernization initiatives enabling migration from legacy architecture to microservices-based platforms.",
+        "Established globally distributed engineering and DevOps operations across 4 delivery tracks with 18-member cross-functional teams spanning development, DevOps, and NPS functions.",
+        "Transformed enterprise liquidity and treasury platform delivery across Java, WebSphere, and SQL-based ecosystems supporting global banking operations.",
+        "Standardized DevSecOps governance and compliance initiatives including Blackduck, Checkmarx, Sonar, Contrast, and observability-driven operational controls.",
+        "Accelerated end-to-end deployment automation initiatives across lower environments through pre-production, improving release efficiency and reducing operational risk.",
+        "Directed modernization initiatives enabling migration from legacy architecture to microservices-based platforms.",
+        "Partnered with global stakeholders to strengthen governance cadence, deployment reliability, platform stability, and compliance adherence.",
+        "Oversaw security remediation and release governance activities ensuring enterprise compliance standards and audit readiness.",
         "Received Quarterly Gold Award for implementing one-click deployment automation improving deployment efficiency by 25%."
       ]
     },
@@ -49,9 +53,14 @@
       "period": "May 2011 – Apr 2015",
       "responsibilities": [
         "Led managed services delivery for 32 enterprise insurance clients across globally distributed engagement models.",
-        "Managed 2 Agile delivery pods comprising developers and QA engineers, overseeing end-to-end lifecycle execution.",
+        "Managed 2 Agile delivery pods comprising developers and QA engineers, overseeing end-to-end software development lifecycle execution.",
         "Acted as Scrum Master and Delivery Lead driving sprint governance, stakeholder communication, and delivery planning.",
-        "Twice recognized as Employee of the Month for high-impact project execution."
+        "Delivered modernization initiatives involving migration from legacy platforms to Spring Boot-based microservices architecture.",
+        "Contributed to solutioning and technical design for enterprise modernization programs across Java-based ecosystems.",
+        "Collaborated directly with client stakeholders with complete ownership of delivery coordination and execution.",
+        "Worked onsite for client engagements, strengthening customer collaboration and delivery alignment.",
+        "Delivered enterprise implementations across organizations including Home Depot, IBM, Lenovo, and Asurion.",
+        "Recognized as Employee of the Month twice for high-impact project execution."
       ]
     },
     {
@@ -99,6 +108,46 @@
     "title": "System and Method for Data Sharing and Group Messaging using Mobile Phone",
     "number": "225380 984/MUM/2004",
     "jurisdiction": "India"
+  },
+  "recognition": [
+    "Awarded 'Employee of the Quarter' twice for exceptional project delivery in Brillio.",
+    "Received Quarterly Gold Award at Citicorp for implementing a one-click deployment solution, reducing deployment time by 25%.",
+    "Recognized as Employee of the Month twice at Synechron for high-impact project execution.",
+    "Top 4% nationwide in GATE-2004 with All India Rank of 321."
+  ],
+  "executiveSnapshot": [
+    "20 Years of Enterprise Technology Leadership",
+    "$12M+ Portfolio Delivery",
+    "60+ Global Engineering Professionals Led",
+    "Global Delivery across India, US & Europe",
+    "20+ Enterprise Program & Product Releases",
+    "PMP | PRINCE2 | SAFe | Google Cloud Digital Leader",
+    "AI-enabled Delivery | Platform Modernization | Engineering Productivity"
+  ],
+  "businessImpact": [
+    "Directed $12M+ cross-regional portfolios across BFSI, healthcare, and retail domains with full delivery ownership and executive stakeholder engagement.",
+    "Reduced client escalations by 50% through strengthened governance frameworks, delivery oversight, and operational controls.",
+    "Led AI-enabled modernization and DevSecOps transformation initiatives improving engineering productivity, deployment reliability, and delivery efficiency.",
+    "Automated enterprise deployment workflows reducing build and deployment effort by 32% across Citi LMS operations.",
+    "Scaled cross-regional engineering teams across India, Romania and the US, improving delivery predictability and operational efficiency."
+  ],
+  "aiInnovation": [
+    "Built AI-assisted delivery accelerators for project management, documentation, engineering productivity, and rapid application delivery.",
+    "Experimenting with Agentic AI and local LLMs to improve delivery governance, stakeholder reporting, and engineering workflows.",
+    "Developed AI-enabled web solutions demonstrating modern software engineering practices and rapid prototyping."
+  ],
+  "executiveExpertise": {
+    "enterpriseLeadership": ["Portfolio & Program Management", "Enterprise Transformation", "Global Delivery Leadership", "Executive Stakeholder Management", "P&L Ownership & Financial Governance"],
+    "transformationAI": ["Digital Transformation", "AI-assisted Delivery", "Agile / SAFe Delivery", "Engineering Productivity & Automation", "Organizational Transformation"],
+    "governanceDeliveryExcellence": ["Risk & Compliance Management", "Delivery Governance", "Operational Excellence", "Quality & Process Excellence", "Release Management"],
+    "technologyStrategy": ["Cloud & Modern Engineering", "DevSecOps & CI/CD", "Cloud & Platform Modernization", "Engineering Productivity & Automation", "Data & AI Platforms (Exposure)"]
+  },
+  "technologyEcosystem": {
+    "aiDevelopment": ["GitHub Copilot", "Codex", "Claude", "Cursor", "Antigravity", "Ollama"],
+    "devSecOps": ["Jenkins", "Blackduck", "Checkmarx", "Sonar", "Contrast", "AppDynamics"],
+    "engineeringPlatforms": ["Java", "Spring Boot", "WebSphere", "AWS", "SQL"],
+    "deliveryCollaboration": ["Jira", "NetSuite", "MS Project"],
+    "databaseMiddleware": ["SQL Server", "PL/SQL"]
   },
   "resumeUrl": "/Sumeet Resume.pdf",
   "quickActions": {
