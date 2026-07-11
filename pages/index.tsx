@@ -29,8 +29,8 @@ export default function Home({ pageHtml }: HomeProps) {
   return (
     <>
       <Head>
-        <title>Sumeet Boob | AI Transformation & Delivery Leader</title>
-        <meta name="description" content="Portfolio of Sumeet Boob - AI Transformation & Delivery Leader | PMP®" />
+        <title>Sumeet Boob | Enterprise Transformation & Delivery Leader | PMP®</title>
+        <meta name="description" content="Portfolio of Sumeet Boob - Enterprise Transformation & Delivery Leader | Program & Portfolio Management | PMP® | 20 Years of Global Leadership" />
       </Head>
 
       <div style={{ minHeight: "100vh", position: "relative", background: "var(--bg-color)" }}>
